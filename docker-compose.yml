@@ -1,18 +1,18 @@
 version: '3'
 
 services:
-  db-postgresql-project-nest:
-    image: postgres:alpine
-    ports:
-      - '5432:5432'
-    container_name: 'db-postgresql-project-nest'
+ database:
+    image: bitnami/postgresql
+    ports: 
+      - '5431:5432'
+    container_name: project-api
     restart: always
-    volumes:
-      - ./banco-de-dados-api-nest:/var/lib/postgresql/data
-    environment:
-      POSTGRES_USER: pguser
-      POSTGRES_PASSWORD: pgpassword123
-      POSTGRES_DB: dbpostgresqlprojectnest
+    volumes: 
+      - project-api-disk:/var/lib/postgresql/data
+    environment: 
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: supersenha
+      POSTGRES_DB: projectapi
 
-volumes:
-   banco-de-dados-api-nest:
+volumes: 
+  project-api-disk:
