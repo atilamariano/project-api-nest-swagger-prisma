@@ -17,3 +17,12 @@ model Users {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Books {
+  id Int @id @unique @default(autoincrement())
+  title String @unique
+  author String
+  description String
+  imgUrl String
+  value Int
+}
