@@ -72,12 +72,10 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
 
-  {
+
     "lint-staged": {
       "**/*": "prettier --write --ignore-unknown"
     }
   }
-
-}
