@@ -2,7 +2,7 @@ export class CreateBookDto {
     /** O Id serve como identificação unica do item.
      * example: 215612166548
      */
-    id: string;
+    id: number;
     /** O title tem a função nomear o item.
      * example: João e o pé de feijão
      */

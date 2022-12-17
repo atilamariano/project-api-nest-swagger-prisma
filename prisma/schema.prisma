@@ -26,3 +26,9 @@ model Books {
   imgUrl String
   value Int
 }
+
+model Genre {
+    id Int @id @unique @default(autoincrement())
+    genre String
+}
+
